@@ -13,13 +13,13 @@ const surveySchema = new mongoose.Schema({
       type: String,
       required: true
     },
-    answer: {
+    answer: [{
       type: String,
       required: true
-    },
-    response: {
+    }],
+    response: [{
       type: String
-    }
+    }]
   },
   completed: Boolean,
   url: String,
