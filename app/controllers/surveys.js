@@ -11,7 +11,7 @@ const Survey = models.survey
 const authenticate = require('./concerns/authenticate')
 const setUser = require('./concerns/set-current-user')
 const setModel = require('./concerns/set-mongoose-model')
-const nanoid = require('nanoid')
+//const nanoid = require('nanoid')
 //const format = require('nanoid/format')
 
 /* const done = function () {
@@ -39,6 +39,9 @@ const index = (req, res, next) => {
 }
 
 const show = (req, res) => {
+  res.json({
+    survey: req.survey.toJSON({ virtuals: true, user: req.user })
+  })
 }
 
 const destroy = (req, res, next) => {
