@@ -42,7 +42,9 @@ const show = (req, res) => {
 }
 
 const destroy = (req, res, next) => {
-
+  req.survey.remove()
+    .then(() => res.sendStatus(204))
+    .catch(next)
 }
 
 const update = (req, res, next) => {
