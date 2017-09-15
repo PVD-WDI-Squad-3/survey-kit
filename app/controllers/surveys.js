@@ -42,6 +42,7 @@ const show = (req, res) => {
 }
 
 const destroy = (req, res, next) => {
+
 }
 
 const update = (req, res, next) => {

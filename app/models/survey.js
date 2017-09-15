@@ -3,18 +3,18 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-/*const answerSchema = new mongoose.Schema({
-  type: String,
-  /*selected: {
+const answerSchema = new mongoose.Schema({
+  answer: String,
+  selected: {
     type: Number,
     default: 0
   }
-})*/
+})
 
 const questionSchema = new mongoose.Schema({
   content: {
     question: String,
-    answers: [String]
+    answers: [answerSchema]
   }
 })
 
