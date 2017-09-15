@@ -6,7 +6,7 @@ mongoose.connect('mongodb://localhost/survey-kit-back-end-development')
 const db = mongoose.connection*/
 const models = require('app/models')
 const Survey = models.survey
-const User = models.user
+//const User = models.user
 
 const authenticate = require('./concerns/authenticate')
 const setUser = require('./concerns/set-current-user')
@@ -19,7 +19,7 @@ const nanoid = require('nanoid')
 } */
 
 const create = (req, res, next) => {
-  let id = nanoid()
+  //let id = nanoid()
   const survey = Object.assign(req.body.survey, {
     //url: 'https://',
     _owner: req.user._id
@@ -28,7 +28,8 @@ const create = (req, res, next) => {
     .then(survey =>
       res.status(201)
         .json({
-          survey: survey.toJSON({ virtuals: true, user: req.user })
+          survey: survey.toJSON({ virtuals: true, user: req.user
+          })
         }))
     .catch(next)
 }
