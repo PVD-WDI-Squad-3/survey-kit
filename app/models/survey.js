@@ -3,32 +3,61 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+const answerSchema = new mongoose.Schema({
+  type: String,
+  /*selected: {
+    type: Number,
+    default: 0
+  }*/
+})
+
+const questionSchema = new mongoose.Schema({
+  content: {
+    question: {
+      type: String
+    },
+    answers: {
+      type: [answerSchema],
+      default: undefined
+    }
+  }
+})
+
 const surveySchema = new mongoose.Schema({
   title: {
     type: String,
     required: true
   },
-  content: {
-    question: {
-      type: String,
-      required: true
-    },
-    answer: [{
-      type: String,
-      required: true
-    }],
-    response: [{
+  questions: {
+    type: [questionSchema],
+    default: undefined
+  },
+    /* response: [{
       type: String
     }]
-  },
-  completed: Boolean,
-  url: String,
-  owner: [{ type: Schema.Types.ObjectId, ref: 'user' }]
+  }, */
+  /* completed: {
+      type: Boolean,
+      default: false
+    }, */
+  // url: String,
+  _owner: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  }
 },
   {
     timestamps: true,
     toObject: { virtuals: true },
-    toJSON: { virtuals: true }
+    toJSON: {
+      virtuals: true,
+      transform: function (doc, ret, options) {
+        const userId = (options.user && options.user._id) || false
+        ret.editable = userId && userId.equals(doc._owner)
+        return ret
+     }
+   }
   })
 /* surveySchema.virtual('generateRandomUrl').get(function () {
   somefunction
