@@ -9,14 +9,19 @@ curl "${API}${URL_PATH}" \
   --header "Content-Type: application/json" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
-    "title": "'"${TITLE}"'",
-    "questions": {
-      "content": {
-        "question": "'"${QUESTION}"'",
-        "answers": [
-          "'"${ANSWERS}"'"
-        ]
-      }
+    "survey": {
+      "title": "What should we eat?",
+      "questions": [{
+        "content": {
+          "question": "What should we eat?",
+          "answers": [
+            "Brains",
+            "Monkeys",
+            "Fish",
+            "Nothing"
+          ]
+        }
+      }]
     }
   }'
 
