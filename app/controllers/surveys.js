@@ -35,7 +35,12 @@ const create = (req, res, next) => {
 }
 
 const index = (req, res, next) => {
-
+  Survey.find()
+    .then(surveys => res.json({
+      surveys: surveys.map((survey) =>
+        survey.toJSON({ virtuals: true, user: req.user }))
+    }))
+    .catch(next)
 }
 
 const show = (req, res) => {
