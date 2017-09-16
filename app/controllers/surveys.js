@@ -51,7 +51,14 @@ const destroy = (req, res, next) => {
 }
 
 const update = (req, res, next) => {
+  console.log(req.body)
+  delete req.body._owner  // disallow owner reassignment.
+  req.survey.update(req.body.survey)
+    .then(() => res.sendStatus(204))
+    .catch(next)
 }
+
+// survey.questions.content.answers.selected ?? boolean value?
 
 module.exports = controller({
   create,
