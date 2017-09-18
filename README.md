@@ -1,6 +1,6 @@
-#SurveyKit
+# SurveyKit
 
-##Build Your Survey in a Pinch
+## Build Your Survey in a Pinch
 
 
 Deployed: https://polar-fjord-39713.herokuapp.com/
