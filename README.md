@@ -32,7 +32,25 @@ can be found [here](https://docs.google.com/document/d/1JZLS4SFVwl-2guNw10I9j4O9
 | GET           | /surveys           | surveys#index     |
 | GET           | /surveys /:id      |   surveys#show    |
 |               |                    |                   |
-
+| POST          | /sign-in           | users#                  |
+|               |                    |                   |
+|               |                    |                   |
+|               |                    |                   |
+|               |                    |                   |
+|               |                    |                   |
+|               |                    |                   |
+|               |                    |                   |
+|               |                    |                   |
+|               |                    |                   |
+|               |                    |                   |
+|               |                    |                   |
+|               |                    |                   |
+|               |                    |                   |
+|               |                    |                   |
+|               |                    |                   |
+|               |                    |                   |
+|               |                    |                   |
+|               |                    |                   |
 
 ### Front-End Repo
 https://github.com/PVD-WDI-Squad-3/survey-kit-front-end
