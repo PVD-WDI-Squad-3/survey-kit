@@ -7,22 +7,9 @@ curl "${API}${URL_PATH}/${ID}" \
   --include \
   --request PATCH \
   --header "Content-Type: application/json" \
-  --header "Authorization: Token token=${TOKEN}" \
+  --header "Authorization: Token token=${ANSWERID}" \
   --data '{
-    "survey": {
-      "title": "Eats",
-      "questions": [{
-        "content": {
-          "question": "What should we eat?",
-          "answers": [
-            {"answer": "Brains", "selected": 1},
-            {"answer": "Monkeys"},
-            {"answer": "Fish"},
-            {"answer": "Nothing"}
-          ]
-        }
-      }]
-    }
+            "selected": 1
   }'
 
 echo
