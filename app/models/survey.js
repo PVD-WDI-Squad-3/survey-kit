@@ -27,8 +27,32 @@ const questionSchema = new mongoose.Schema({
 
 const surveySchema = new mongoose.Schema({
   title: String,
-  questions: [questionSchema],
-
+  //questions: [questionSchema],
+  question: String,
+  answer1: String,
+  answer1Selected: {
+    type: Number,
+    default: 0
+  },
+  answer2: String,
+  answer2Selected: {
+    type: Number,
+    default: 0
+  },
+  answer3: String,
+  answer3Selected: {
+    type: Number,
+    default: 0
+  },
+  answer4: String,
+  answer4Selected: {
+    type: Number,
+    default: 0
+  },
+  timesTaken: {
+    type: Number,
+    default: 0
+  },
   /*responses: [{
       question: String,
       answer: String

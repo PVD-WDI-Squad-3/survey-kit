@@ -21,7 +21,8 @@ curl "${API}${URL_PATH}" \
             {"answer": "Nothing"}
           ]
         }
-      }]
+      }],
+      "timesTaken": 0
     }
   }'
 
