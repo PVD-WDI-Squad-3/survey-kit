@@ -24,33 +24,5 @@ Users of this app can create, view, take and delete surveys.  There are two type
 Our planning documents, including our user stories, ERD, and wireframes,
 can be found [here](https://docs.google.com/document/d/1JZLS4SFVwl-2guNw10I9j4O9nWy22VpnurYFZH-N2y0/view#heading=h.7jvizmirubyl).
 
-### Routes/End-Points
-
-
-| Verb          | URI Pattern        | Controller#Action |
-| ------------- |:------------------:| -----------------:|
-| GET           | /surveys           | surveys#index     |
-| GET           | /surveys /:id      |   surveys#show    |
-|               |                    |                   |
-| POST          | /sign-in           | users#                  |
-|               |                    |                   |
-|               |                    |                   |
-|               |                    |                   |
-|               |                    |                   |
-|               |                    |                   |
-|               |                    |                   |
-|               |                    |                   |
-|               |                    |                   |
-|               |                    |                   |
-|               |                    |                   |
-|               |                    |                   |
-|               |                    |                   |
-|               |                    |                   |
-|               |                    |                   |
-|               |                    |                   |
-|               |                    |                   |
-|               |                    |                   |
-|               |                    |                   |
-
 ### Front-End Repo
 https://github.com/PVD-WDI-Squad-3/survey-kit-front-end
